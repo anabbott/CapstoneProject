@@ -1,0 +1,69 @@
+Project Background
+
+Definition of Sidewalks from FHWA/DOT
+
+Support for Sidewalks in neighborhoods
+
+Quality of Life
+
+
+Persons with Physical Difficulties
+According to the Center for Disease Control, 15.2% of Americans have some type of physical difficulty, with "Very Difficult to or cannot walk quarter of a mile" as a difficulty experienced by 7.0% of Americans.  
+
+Sidewalks as path to prosperity in low income neighborhoods
+
+
+Occurrence of car/pedestrian accidents in Dallas?  This could be another dataset
+
+
+Project Objectives
+The project seeks to use visual image data, processed through some type of classification machine learning algorithm, to define where sidewalks exist and to grade the relative quality of the sidewalks.  Once the presence of sidewalks is detected, the data will be returned in a format suitable for inclusion in a GIS (Geographic Information System) application.
+
+
+Proposed Action Plan
+Existing Research and Literature Search
+	Focused in the areas of machine learning from visual image data
+	Domain understanding of the issues regarding sidewalks, neighborhood audit, quality of life, health issues
+
+Development of Training Dataset
+	Sourcing of Images
+	Crowdsourcing? Image annotation of Sidewalk (Y/N), quality grade (This could be a 0-n grade, where 0=No Sidewalk)
+
+Development of Model
+	Need to devise someway in PIL to process the images to reduce the dimensionality and focus in on how the model finds a sidewalk
+	Some of our classwork reduced faces to b/w images, and then the commonality of features was accentuated.  Need to avoide confusion between a road and sidewalk, what else that might be in images with similar features
+Texture of good sidewalk versus bad
+How do we keep up with GPS data for images?  Might need a database to maintain images->GPS relationship
+
+
+Data resources
+A wealth of street-level photographs have been amassed through several resources, with varying levels of accessibility.  
+
+Two of the major search engines, Google and Bing, have integrated street-level photographs collected via cars with panoramic cameras attached that are periodically driven through city streets.  Anecdotal checks of both sources provide proof that the images are generally high resolution, clear, and provide a view in most cases of sidewalks.  The limitation of the data is that only some streets are covered, but generally most streets within urban limits are likely to be covered, with the exception being side streets and cul-de-sacs.
+
+A third party project, Mapillary, has crowd sourced street photographs.  An additional advantage to Mapillary's data set is that it can be collected from any smart phone, and thus may include areas that are only walkable - like parks.
+
+The databases of real estate evaluation websites, like Trulia and Zillow, may also yield some supplemental image data for harvesting to help complete the full collection of street and sidewalks.
+
+There are also multiple secondary sources of data available that may act as datasets that create a "proxy" of the location of sidewalks beyond images, or potential captured sidewalk quality.  The community-sourced routes on MapMyRun revealed more than 800,000 routes in the city of Dallas and vicinity.  Several visualization projects have previously harvested the data from MapMyRun to create visualizations of common routes.  Use of this data would be reliant on the assumption that the majority of the route included from the user GPS tracks are on sidewalks.  A further assumption could be made to assume that more heavily run routes are more likely to be high quality sidewalks, generally even and complete pavement.  
+
+Dallas, via their open data project, has available a three collection of their "311" service requests.  311 Service requests are generated via citizen calls to 311, or submission to a website, for fixes to problems in their neighborhood.  In fact, several of the standard codes for 311 service requests pertain directly to the presence, and quality of, sidewalks.  A request to fix a broken sidewalk could establish that sidewalks are actually present on a specific street, or establish a probability for a neighborhood as well as help predict quality of the sidewalk.
+
+
+Potential shortfalls in Data
+As outlined above, the process could have shortfalls due to availability and quality of data from the sources.
+
+Search engine street view imagery may be limited to more major thoroughfares.  There could also be a bias between different income levels, with potential biases towards higher income neighborhoods.  
+
+The limitations of GPS accurracy could pose a further accuracy issue in mapping the outcomes of the actual location of sidewalks, versus the location of the search engine's car while taking the panoramic images.
+
+Finally, the search engines rate of refresh on images for city streets may cause the information to be out of date from the start, and requires regular refresh.
+
+Ethical Concerns
+Representation of low-income neighborhoods and areas in both train, test, validation data.  Low income individuals have higher occurrence of physical difficulty, especially in walking 1/4 mile measure.
+
+Ethics of large scale scraping from source websites
+
+
+
+Bibliographic Resources
